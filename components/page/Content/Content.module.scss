@@ -1,0 +1,33 @@
+// @import 'styles/scaffold';
+
+// Animations
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+// Styles
+.PageContent {
+  animation: fadeIn $transition-base forwards;
+  animation-delay: 0.8s;
+  opacity: 0;
+}
+
+.PageContent__image {
+  border-radius: 1rem;
+  display: block;
+  height: auto;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  width: 100%;
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+}

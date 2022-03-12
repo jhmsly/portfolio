@@ -1,0 +1,94 @@
+{
+  "name": "@jhmsly/portfolio",
+  "description": "Development portfolio for 2022.",
+  "author": {
+    "name": "Jay Hemsley",
+    "email": "jay@digitalhe.at",
+    "url": "https://digitalhe.at"
+  },
+  "homepage": "https://digitalhe.at",
+  "bugs": {
+    "url": "https://github.com/jhmsly/portfolio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jhmsly/portfolio.git"
+  },
+  "license": "MIT",
+  "private": true,
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@next/bundle-analyzer": "^10.0.5",
+    "@prismicio/client": "^4.0.0",
+    "bootstrap": "^5.0.0-beta1",
+    "cross-env": "^7.0.3",
+    "dayjs": "^1.10.3",
+    "framer-motion": "^3.1.1",
+    "next": "10.0.4",
+    "prismic-reactjs": "^1.3.3",
+    "prop-types": "^15.7.2",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-lazy-load-image-component": "^1.5.1",
+    "resize-observer-polyfill": "^1.5.1",
+    "sass": "^1.32.0",
+    "smartquotes": "^2.3.2",
+    "smoothscroll-polyfill": "^0.4.4"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^5.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^5.0.6",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.8.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-scss": "^3.18.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "analyze": "cross-env ANALYZE=true npm run build",
+    "lint-staged": "lint-staged",
+    "lint:css": "stylelint **/*.scss --fix",
+    "lint:js": "eslint --fix .",
+    "pretty:css": "prettier --write '**/*.{css,scss}'",
+    "pretty:js": "prettier --write '**/*.{js,jsx}'"
+  },
+  "husky": {
+    "hooks": {
+      "postinstall": "husky install",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx}": [
+      "npm run pretty:js",
+      "npm run lint:js"
+    ],
+    "**/*.{css,scss}": [
+      "npm run pretty:css",
+      "npm run lint:css"
+    ]
+  }
+}

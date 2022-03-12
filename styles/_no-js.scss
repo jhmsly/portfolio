@@ -1,0 +1,8 @@
+/* stylelint-disable declaration-no-important */
+
+.no-js {
+  .Header__inner {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
